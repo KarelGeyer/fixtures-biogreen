@@ -1,0 +1,12 @@
+name: Labeler
+on: [pull_request]
+
+jobs:
+  label:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: SalesChamp/labeler@v3.1
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"

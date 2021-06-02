@@ -1,0 +1,68 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7-cli-node
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-{{ checksum "yarn.lock" }}
+            - npm-
+      - restore_cache:
+          keys:
+            - composer-{{ checksum "composer.lock" }}
+            - composer-
+      - run:
+          name: "Yarn"
+          command: yarn
+      - save_cache:
+          key: npm-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: "Composer"
+          command: composer install -n --prefer-dist
+      - save_cache:
+          key: composer-{{ checksum "composer.lock" }}
+          paths:
+            - ./vendor
+      - run:
+          name: "Build"
+          command: yarn build
+      - store_artifacts:
+          path: out
+          destination: dist
+      - persist_to_workspace:
+          root: .
+          paths: out/*
+      - run:
+          name: "Run eclint"
+          command: yarn test
+
+  release:
+    docker:
+      - image: circleci/php:7-cli-node
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-{{ checksum "yarn.lock" }}
+            - npm-
+      - run: yarn
+      - run: npx semantic-release
+
+workflows:
+  version: 2
+  build-and-release:
+    jobs:
+      - build
+      - release:
+          context: org
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+

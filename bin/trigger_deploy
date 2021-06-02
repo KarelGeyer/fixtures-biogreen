@@ -1,0 +1,107 @@
+#!/bin/bash
+
+function run_job()
+{
+  local execution
+  local id
+
+  execution=$(curl -s \
+      -H "x-rundeck-auth-token: $RUNDECK_AUTH_TOKEN" \
+      -H "accept: application/json" \
+      -d "option.BuildArtefact=$1" \
+      -d "option.project_id=$PROJECT_ID" \
+      -d "option.branch=$FIXTURES" \
+      -d "option.module=$MODULE" \
+      -d "option.version=${CI_COMMIT_SHA:0:8}" \
+      $RUNDECK_API_URL/job/36c0ac44-3672-4407-991c-0d3c292d827b/run)
+
+  if [[ ! $? -eq 0 ]]; then
+    echo "Cannot run job with artefact $1"
+    echo "$execution"
+    return 2
+  fi
+
+  id=$(echo "$execution" | jq -r .id)
+
+  echo $id
+}
+
+function upload_artefact()
+{
+  local artefact
+  artefact=$(curl -s \
+      -H "x-rundeck-auth-token: $RUNDECK_AUTH_TOKEN" \
+      -H "accept: application/json" \
+      -F "option.BuildArtefact=@artefacts-$CI_COMMIT_SHA.zip" \
+      $RUNDECK_API_URL/job/36c0ac44-3672-4407-991c-0d3c292d827b/input/file)
+
+  if [[ ! $? -eq 0 ]]; then
+    echo "Cannot upload artefact"
+    echo "$artefact"
+    return 2
+  fi
+  echo "$artefact" | jq -r .options.BuildArtefact
+}
+
+function get_status()
+{
+  local execution
+
+  execution=$(curl --fail -s -H 'accept: application/json' -H "x-rundeck-auth-token: $RUNDECK_AUTH_TOKEN" "$RUNDECK_API_URL/execution/$1")
+
+  if [[ ! $? -eq 0 ]]; then
+    echo "Cannot find execution with id $1"
+    echo "$execution"
+    return 2
+  fi
+
+  echo "$execution" | jq -r '.status'
+}
+
+function get_campaign_id()
+{
+  local output
+
+  output=$(curl --fail -s -H 'accept: application/json' -H "x-rundeck-auth-token: $RUNDECK_AUTH_TOKEN" "$RUNDECK_API_URL/execution/$1/output")
+
+  if [[ ! $? -eq 0 ]]; then
+    echo "Cannot find output of execution with id $1"
+    echo "$execution"
+    return 2
+  fi
+
+  echo "$output" | jq -r '.entries[] | .log | match("Created .* with ID (\\d+)$").captures[0].string'
+}
+
+function slack_notify()
+{
+  curl -s -H 'content-type: application/json' "$SLACK_WEBHOOK_URL" --data '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"New Campaign with fixtures '"$FIXTURES"' was deployed to project '"$PROJECT_ID"' https://app.staging.saleschamp.nl"}},{"type":"actions","elements":[{"type":"button","text":{"type":"plain_text","emoji":true,"text":"Activate"},"value":"activate_campaign_'"$1"'"}]}]}'
+
+  if [[ ! $? -eq 0 ]]; then
+    echo "Cannot send message to slack"
+    return 2
+  fi
+}
+
+ARTEFACT_ID=$(upload_artefact)
+echo "Artefact $ARTEFACT_ID"
+EXECUTION_ID=$(run_job "$ARTEFACT_ID")
+echo "Execution $EXECUTION_ID"
+
+STATUS=$(get_status "$EXECUTION_ID")
+until [[ $STATUS != "running" ]]; do
+  sleep 3
+  echo "Waiting for execution to complete"
+  STATUS=$(get_status "$EXECUTION_ID")
+done
+
+if [[ $STATUS != "succeeded" ]]; then
+  echo "Non successful status $STATUS"
+  exit 2
+fi
+
+CAMPAIGN_ID=$(get_campaign_id "$EXECUTION_ID")
+
+slack_notify "$CAMPAIGN_ID"
+
+exit 0

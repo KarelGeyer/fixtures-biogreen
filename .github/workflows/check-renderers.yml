@@ -1,0 +1,20 @@
+name: Fixtures Check
+
+on: [push]
+
+jobs:
+  check-renderers:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js v12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install dependencies
+      run: |
+        yarn
+        npm i -g yamljs
+    - run: yarn build
+    - name: check references
+      run: find out/ -mindepth 1 -type d | xargs -n1 --no-run-if-empty -P4 ./check-references.sh

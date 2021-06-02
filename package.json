@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "license": "UNLICENSED",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/prompt-cli": "^8.3.5",
+    "deepmerge": "^4.2.2",
+    "eclint": "^2.8.1",
+    "fast-glob": "^3.2.2",
+    "globby": "^11.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-eol": "^0.2.0",
+    "gulp-merge-json": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-shell": "^0.8.0",
+    "gulp-toml": "^0.2.0",
+    "handlebars": "^4.7.3",
+    "husky": "1.0.0",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "toml": "^3.0.0",
+    "yargs": "^15.1.0"
+  },
+  "scripts": {
+    "commit": "commit",
+    "build": "gulp",
+    "test": "eclint check \"**/*\" \"!vendor/**/*\" \"!node_modules/**/*\"  && php linter.php",
+    "fix": "eclint fix *",
+    "mapping": "gomplate -d 'm=out/mapping.json' -f mapping.tpl"
+  }
+}

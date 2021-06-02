@@ -1,0 +1,6 @@
+vendor
+node_modules
+/out/
+mapping.override.toml
+mapping.*.override.toml
+/config.js

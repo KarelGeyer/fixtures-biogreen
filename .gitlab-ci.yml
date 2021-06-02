@@ -1,0 +1,38 @@
+image: circleci/php:7-cli-node
+
+variables:
+  RUNDECK_API_URL: https://rundeck.staging-apps.saleschamp.io/api/27
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  cache:
+    paths:
+      - node_modules
+      - vendor
+  artifacts:
+    when: on_success
+    paths:
+      - assets/
+      - out/
+      - bin/
+  script:
+    - yarn
+    - composer install -n --prefer-dist
+    - if [[ $TARGET_ENV == "staging" ]]; then
+      yarn build -d proxy-hostname=staging-apps.saleschamp.io -d staging=1; else
+      yarn build
+      ; fi
+    - yarn test
+
+deploy:
+  stage: deploy
+  script:
+    - zip -r artefacts-$CI_COMMIT_SHA.zip out/ assets/ bin/
+    - bin/trigger_deploy
+  only:
+    variables:
+      - $DEPLOY_ENV == "staging"

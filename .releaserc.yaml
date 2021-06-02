@@ -1,0 +1,9 @@
+verifyConditions:
+  - '@semantic-release/github'
+
+prepare: []
+
+publish:
+  - path: '@semantic-release/github'
+    assets: []
+
