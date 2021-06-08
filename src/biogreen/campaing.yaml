@@ -1,0 +1,5 @@
+name: biogreen
+project: biogreen
+vendor: biogreen
+module: list
+forceTeamSelection: false

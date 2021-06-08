@@ -1,0 +1,12 @@
+name: "Biogreen"
+account: {{account}}
+isActive: yes
+
+branding: 
+    frontend: 
+        image: "./../../assets/energiedirect-logo.png"
+        color: '#320a4b'
+    backend: 
+        image: "./../../assets/energiedirect-logo.png"
+        color: '#320a4b'
+

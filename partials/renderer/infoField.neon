@@ -1,0 +1,11 @@
+-
+  type: label
+  value: {{label}}
+  columns: 5
+{{#if icon}}  classNames: [vendor-icon-{{icon}}]{{/if}}
+-
+  type: field
+  representsField: {{field}}
+  columns: 5
+  alignment: right
+  isEditable: false

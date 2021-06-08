@@ -1,0 +1,4 @@
+- type: text
+  name: eanCodeGridStroom
+- type: text
+  name: eanCodeGridGas

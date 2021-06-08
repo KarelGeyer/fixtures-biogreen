@@ -1,13 +1,13 @@
 ---
 # PROJECT
 account: essent
-brandingColor: "#e60067"
-stagingEvidenceMailbox: "testing@saleschamp.nl"
+brandingColor: '#e60067'
+stagingEvidenceMailbox: 'testing@saleschamp.nl'
 proxy-hostname: saleschamp.io
 
 # Override for each project
-humanReadableResellerName: ""
-resellerSlugTail: ""
+humanReadableResellerName: ''
+resellerSlugTail: ''
 
 # Indicator of shared characteristics with main reseller within Essent Hof projects
 isEssentHofOrPartner: true
@@ -16,18 +16,18 @@ isEssentHofOrPartner: true
 
 # Option value mappings for whether the lead wishes to stay in touch in Essent Hof projects
 cancelFutureContactOptions:
-  "1": "Ik sta open voor toekomstig contact"
+  '1': 'Ik sta open voor toekomstig contact'
 
 # status:CANCEL:reason values in Essent Hof projects
 cancelReasons:
-  "1": "Tevreden bij huidige leverancier"
-  "2": "Wil nog op internet kijken"
-  "3": "Wil er nog over nadenken / Overleggen met partner"
-  "4": "Heeft overstapangst"
-  "5": "Vindt Essent te duur"
-  "6": "Slechte verhalen / ervaring m.b.t. Essent"
-  "7": "Wil geen rekeningnummer of handtekening geven"
-  "8": "Wil geen borg betalen"
+  '1': 'Tevreden bij huidige leverancier'
+  '2': 'Wil nog op internet kijken'
+  '3': 'Wil er nog over nadenken / Overleggen met partner'
+  '4': 'Heeft overstapangst'
+  '5': 'Vindt Essent te duur'
+  '6': 'Slechte verhalen / ervaring m.b.t. Essent'
+  '7': 'Wil geen rekeningnummer of handtekening geven'
+  '8': 'Wil geen borg betalen'
 
 # RENDERERS
 

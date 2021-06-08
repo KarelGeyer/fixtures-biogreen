@@ -1,0 +1,6 @@
+-
+  type: field
+  representsField: status:SALE:eanCodeGridStroom
+-
+  type: field
+  representsField: status:SALE:eanCodeGridGas

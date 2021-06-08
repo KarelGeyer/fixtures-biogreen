@@ -1,0 +1,1228 @@
+-
+  -
+    type: label
+    value: Aanhef
+    columns: 5
+
+  -
+    type: field
+    representsField: sex
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: Voorletters
+    columns: 5
+
+  -
+    type: field
+    representsField: name
+    width: 60
+    alignment: right
+
+  -
+    type: field
+    representsField: preposition
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: Achternaam
+    columns: 5
+
+  -
+    type: field
+    representsField: surname
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: Telefoon
+    columns: 5
+
+  -
+    type: field
+    representsField: telephone
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: "Email"
+    columns: 5
+
+  -
+    type: field
+    representsField: email
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: Geboortedatum
+    columns: 5
+
+  -
+    type: field
+    representsField: dateOfBirth
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: IBAN
+    columns: 5
+
+  -
+    type: field
+    representsField: bankAccount
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: Laatste 3 cijfers IBAN
+    width: 40
+
+  -
+    type: field
+    representsField: ibanKey
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: EAN gas
+    width: 40
+    alignment: left
+
+  -
+    type: field
+    representsField: eanCodeGas
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: EAN stroom
+    width: 40
+    alignment: left
+
+  -
+    type: field
+    representsField: eanCodeStroom
+    width: 60
+    alignment: right
+
+-
+  -
+    type: label
+    value: AANTEKENING
+    columns: 5
+
+  -
+    type: field
+    representsField: note
+    columns: 7
+    alignment: right
+
+# nlBagMunicipality
+-
+  -
+    type: label
+    value: Gemeente
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagMunicipality
+    columns: 7
+    alignment: right
+
+# nlBagProvince
+-
+  -
+    type: label
+    value: Provincie
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagProvince
+    columns: 7
+    alignment: right
+
+# nlBagNumericIndication
+-
+  -
+    type: label
+    value: Nummeraanduiding
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagNumericIndication
+    columns: 7
+    alignment: right
+
+# nlBagResidenceObjectPurpose
+-
+  -
+    type: label
+    value: Verblijfsobjectgebruiksdoel
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagResidenceObjectPurpose
+    columns: 7
+    alignment: right
+
+# nlBagResidenceObjectFloorArea
+-
+  -
+    type: label
+    value: Oppervlakteverblijfsobject
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagResidenceObjectFloorArea
+    columns: 7
+    alignment: right
+
+# nlBagResidenceObjectStatus
+-
+  -
+    type: label
+    value: Verblijfsobjectstatus
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagResidenceObjectStatus
+    columns: 7
+    alignment: right
+
+# nlBagObjectId
+-
+  -
+    type: label
+    value: ObjectID
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagObjectId
+    columns: 7
+    alignment: right
+
+# nlBagObjectType
+-
+  -
+    type: label
+    value: Objecttype
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagObjectType
+    columns: 7
+    alignment: right
+
+# nlBagSecondaryAddress
+-
+  -
+    type: label
+    value: Nevenadres
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagSecondaryAddress
+    columns: 7
+    alignment: right
+
+# nlBagPropertyId
+-
+  -
+    type: label
+    value: PandID
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagPropertyId
+    columns: 7
+    alignment: right
+
+# nlBagPropertyStatus
+-
+  -
+    type: label
+    value: Pandstatus
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagPropertyStatus
+    columns: 7
+    alignment: right
+
+# nlBagPropertyConstructionYear
+-
+  -
+    type: label
+    value: Pandbouwjaar
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagPropertyConstructionYear
+    columns: 7
+    alignment: right
+
+# nlBagEpsg28992X
+-
+  -
+    type: label
+    value: "BAG EPSG:28992 lengtegraad"
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagEpsg28992X
+    columns: 7
+    alignment: right
+
+# nlBagEpsg28992Y
+-
+  -
+    type: label
+    value: "BAG EPSG:28992 breedtegraad"
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagEpsg28992Y
+    columns: 7
+    alignment: right
+
+# nlBagLon
+-
+  -
+    type: label
+    value: "BAG lengtegraad"
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagLon
+    columns: 7
+    alignment: right
+
+# nlBagLat
+-
+  -
+    type: label
+    value: "BAG breedtegraad"
+    columns: 5
+
+  -
+    type: field
+    representsField: nlBagLat
+    columns: 7
+    alignment: right
+
+# lastContract
+-
+  -
+    type: label
+    value: "Last contract's date"
+    columns: 5
+
+  -
+    type: field
+    representsField: lastContract
+    columns: 7
+    alignment: right
+
+# chamberOfCommerceRegistrationPresent
+-
+  -
+    type: label
+    value: "KvK-inschrijving aanwezig"
+    columns: 5
+
+  -
+    type: field
+    representsField: chamberOfCommerceRegistrationPresent
+    columns: 7
+    alignment: right
+
+# hmValue
+-
+  -
+    type: label
+    value: "HM value"
+    columns: 5
+
+  -
+    type: field
+    representsField: hmValue
+    columns: 7
+    alignment: right
+
+# isDualFuel
+-
+  -
+    type: label
+    value: "dl_dual_fuel"
+    columns: 5
+
+  -
+    type: field
+    representsField: isDualFuel
+    columns: 7
+    alignment: right
+
+# fuelTypeUnknown
+-
+  -
+    type: label
+    value: "dl_aansluiting_onbekend"
+    columns: 5
+
+  -
+    type: field
+    representsField: fuelTypeUnknown
+    columns: 7
+    alignment: right
+
+# selectionDate
+-
+  -
+    type: label
+    value: "Datum selectie"
+    columns: 5
+
+  -
+    type: field
+    representsField: selectionDate
+    columns: 7
+    alignment: right
+
+# residenceType
+-
+  -
+    type: label
+    value: "Type woning"
+    columns: 5
+
+  -
+    type: field
+    representsField: residenceType
+    columns: 7
+    alignment: right
+
+# residenceOwnership
+-
+  -
+    type: label
+    value: "Eigendom woning"
+    columns: 5
+
+  -
+    type: field
+    representsField: residenceOwnership
+    columns: 7
+    alignment: right
+
+# roofFitness
+-
+  -
+    type: label
+    value: "Geschiktheid dak"
+    columns: 5
+
+  -
+    type: field
+    representsField: roofFitness
+    columns: 7
+    alignment: right
+
+# isCustomerKeyMismatchScenario
+-
+  -
+    type: label
+    value: "Ongeldige klantsleutel"
+    columns: 5
+
+  -
+    type: field
+    representsField: isCustomerKeyMismatchScenario
+    columns: 7
+    alignment: right
+
+# {{#if isEssentHofOrPartner}}
+# Company name
+-
+  -
+    type: label
+    value: "Bedrijfsnaam"
+    columns: 5
+
+  -
+    type: field
+    representsField: companyName
+    columns: 7
+    alignment: right
+
+# Chamber of Commerce number
+-
+  -
+    type: label
+    value: "KvK-nummer"
+    columns: 5
+
+  -
+    type: field
+    representsField: chamberOfCommerceNumber
+    columns: 7
+    alignment: right
+# {{/if}}
+
+# QC: Handtekening akkoord clausules kwaliteitscontrole
+-
+  -
+    type: field
+    representsField: signatureQualityControl
+
+  # Contract confirmation signature
+  -
+    type: field
+    representsField: signature
+
+# status
+-
+  -
+    type: field
+    representsField: status
+    columns: 11
+
+# Usage sourcing
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Bron verbruik"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:usageInputManual
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Single of dual fuel
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Fueltype"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:fuelStatus
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Segment klant
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Segment klant"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:customerType
+    columns: 7
+    alignment: right
+
+# {{#if isEssentHofOrPartner}}
+# Product B2B
+-
+  dependsOnValue: status:SALE:customerType:Company
+  -
+    type: label
+    value: "Product B2B"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:customerType:Company:product
+    columns: 7
+    alignment: right
+
+# Propositie B2B
+-
+  dependsOnValue: status:SALE:customerType:Company:product:EG
+  -
+    type: label
+    value: "Propositie B2B"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:customerType:Company:product:EG:proposition
+    columns: 7
+    alignment: right
+# {{/if}}
+
+# Product B2C
+-
+  dependsOnValue: status:SALE:customerType:individual
+  -
+    type: label
+    value: "Product B2C"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:customerType:individual:product
+    columns: 7
+    alignment: right
+
+# Propositie B2C
+-
+  dependsOnValue: status:SALE:customerType:individual:product:EG
+  -
+    type: label
+    value: "Propositie B2C"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:customerType:individual:product:EG:proposition
+    columns: 7
+    alignment: right
+
+# Verbruik handmatig invoeren akkoord
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:manuallyProvideConsumption
+    columns: 10
+
+# Actual source of usage details and contract end date
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Herkomst verbruiksgegevens"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:usageProvider
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Berekend termijnbedrag
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Berekend termijnbedrag"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:agreedBudgetBillAmount
+    columns: 7
+    alignment: right
+
+# Estimated yearly energy costs
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Geschatte jaarkosten"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:estimatedAnnualCost
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Consent for manually overriding of budget bill amount estimate
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:manuallyProvideAmount
+    columns: 12
+    alignment: right
+    isEditable: false
+
+# Handmatig ingevoerd termijnbedrag
+-
+  dependsOnValue: status:SALE:manuallyProvideAmount:1
+  -
+    type: label
+    value: "Handmatig ingevoerd termijnbedrag"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:agreedBudgetBillAmountManual
+    columns: 7
+    alignment: right
+
+# Verbruik E normaal
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Verbruik E normaal"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:electricityConsumption
+    columns: 7
+    alignment: right
+
+# Dubbel telwerk stroommeter
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Dubbel telwerk stroommeter"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:hasElectricityOffPeakMeter
+    columns: 7
+    alignment: right
+
+# Verbruik E dal
+-
+  dependsOnValue: status:SALE:hasElectricityOffPeakMeter:1
+  -
+    type: label
+    value: "Verbruik E dal"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:electricityConsumptionOffPeak
+    columns: 7
+    alignment: right
+
+# Verbruik G
+-
+  dependsOnValue: status:SALE:customerType:individual:product:EG
+  -
+    type: label
+    value: "Verbruik G"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:gasConsumption
+    columns: 7
+    alignment: right
+
+# {{#if isEssentHofOrPartner}}
+-
+  dependsOnValue: status:SALE:customerType:Company:product:EG
+  -
+    type: label
+    value: "Verbruik G"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:gasConsumption
+    columns: 7
+    alignment: right
+# {{/if}}
+
+# CAR usage fields
+# Normal electricity usage as per C-AR
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Verbruik E normaal C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:electricityConsumptionCar
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Offpeak electricity rate meter as per C-AR
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Dubbel telwerk stroommeter C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:hasElectricityOffPeakMeterCar
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Offpeak electricity usage as per C-AR
+-
+  dependsOnValue: status:SALE:hasElectricityOffPeakMeterCar:1
+  -
+    type: label
+    value: "Verbruik E dal C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:electricityConsumptionOffPeakCar
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Gas usage as per C-AR
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Verbruik G C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:gasConsumptionCar
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Current electricity supplier's contract end date as per C-AR
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Einddatum huidige leverancier stroom C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:currentContractEndDateStroom
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Essent electricity supply start date
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Voorgestelde startdatum levering stroom Essent"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:newContractStartDateStroom
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Current gas supplier's contract end date as per C-AR
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Einddatum huidige leverancier gas C-AR"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:currentContractEndDateGas
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Essent gas supply start date
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Voorgestelde startdatum levering gas Essent"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:SALE:newContractStartDateGas
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# ADDONS
+-
+  -
+    type: label
+    dependsOnValue: status:SALE
+    value: "ADDONS"
+
+# Interested in Thuisvoordeel
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:addonThuisvoordeel
+    columns: 10
+
+# Service and maintenance conditions text
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:addonSOConditions
+    columns: 10
+    isEditable: false
+
+# Interested in equipment service and maintenance
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:addonSO
+    columns: 10
+
+# Signature for service and maintenance
+-
+  -
+    type: field
+    dependsOnValue: status:SALE:addonSO:1
+    representsField: status:SALE:addonSOSignature
+
+# LEGAL
+-
+  -
+    type: label
+    dependsOnValue: status:SALE
+    value: "JURIDISCH"
+
+# Agree to C-AR- / CER-query
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:consent
+    columns: 10
+
+# Agree with Tailor-Made Offer
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:agreeWithOffer
+    columns: 10
+
+# Agree with general Terms and Conditions, product conditions and payment obligation
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:agreeWithGeneralTerms
+    columns: 10
+
+# Agree to direct debit
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:agreeOnDirectDebit
+    columns: 10
+
+# Quality Control section
+-
+  -
+    type: label
+    dependsOnValue: status:SALE
+    value: "KWALITEITSCONTROLE"
+
+# QC: Agent has presented ID
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlLegitimatie
+    columns: 10
+
+# QC: Customer is aware of commercial intent
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlCommercieelOogmerk
+    columns: 10
+
+# QC: Customer is aware it's a supply contract, not purely informational
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlLeveringsovereenkomstBijInformatieverzoek
+    columns: 10
+
+# QC: Customer agrees to correct representation of yearly costs
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlJuistePresentatieVerwachteTotaleJaarkosten
+    columns: 10
+
+# QC: Agent has explained upon what usage the yearly cost estimate is based
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlVerbruik
+    columns: 10
+
+# QC: Customer is aware of automatic transition to a variable (rate) contract upon expiry of the duration
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlPresentatieVoorwaardenVoorVerlengingEnBeeindiging
+    columns: 10
+
+# QC: Customer is aware of possibilities and conditions for premature contract termination
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlRechtOpEnVoorwaardenVanTussentijdseBeeindiging
+    columns: 10
+
+# QC: Customer is aware of right to fine reimbursement
+-
+  -
+    type: field
+    dependsOnValue: status:SALE
+    representsField: status:SALE:qualityControlCompensatieOpzegvergoeding
+    columns: 10
+
+# Verification number provided by phone
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Inbelcode"
+    columns: 5
+
+  -
+    type: field
+    representsField: verificationNumber
+    columns: 7
+    isEditable: false
+
+# System-specific / internal fields
+-
+  -
+    type: label
+    dependsOnValue: status:SALE
+    value: "SYSTEEMVELDEN"
+
+# Proposition text
+-
+  dependsOnValue: status:SALE
+  -
+    type: label
+    value: "Propositielabel"
+    columns: 5
+
+  -
+    type: field
+    representsField: productText
+    columns: 7
+    alignment: right
+
+-
+  dependsOnValue: status:SALE
+  isHidden: true
+
+  # Tailor-Made Offer JSON
+  -
+    type: field
+    representsField: simpleOfferData
+
+  # Propositions JSON
+  -
+    type: field
+    representsField: propositions
+
+  # Contract PDF binary
+  -
+    type: field
+    representsField: contractPdf
+
+# Offer mail sending / delivery state
+-
+  -
+    type: label
+    value: "Mail met aanbod"
+    columns: 5
+
+  -
+    type: field
+    representsField: contractMailStatus
+    columns: 7
+    alignment: right
+    isEditable: false
+
+### status:CANCEL
+# Reason for CANCELing the flow
+-
+  dependsOnValue: status:CANCEL
+  -
+    type: label
+    value: "Reden CANCEL"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:CANCEL:reason
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Consent to follow-up communication upon CANCELing
+-
+  -
+    type: field
+    dependsOnValue: status:CANCEL
+    representsField: status:CANCEL:futureContact
+    columns: 12
+    isEditable: false
+
+# Preferred means of follow-up communication when CANCELing
+-
+  dependsOnValue: status:CANCEL:futureContact:1
+  -
+    type: label
+    value: "Voorkeur opvolging na CANCEL"
+    columns: 5
+
+  -
+    type: field
+    representsField: cancelContactMethod
+    columns: 7
+    alignment: right
+    isEditable: false
+
+# Signature for follow-up communication when CANCELing
+-
+  -
+    type: field
+    representsField: signatureCancel
+    dependsOnValue: status:CANCEL
+    isHidden: true
+
+###status:NG
+# status:NG:reason
+-
+  dependsOnValue: status:NG
+  -
+    type: label
+    value: "Reden NG"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:NG:reason
+    columns: 7
+    alignment: right
+    isEditable: false
+
+###status:AFS
+# status:AFS:provideMoreDetails
+-
+  -
+    type: field
+    dependsOnValue: status:AFS
+    representsField: status:AFS:provideMoreDetails
+    columns: 12
+    isEditable: false
+
+# status:AFS:date
+-
+  dependsOnValue: status:AFS
+  -
+    type: label
+    value: "Datum AFS"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:AFS:date
+    columns: 7
+    alignment: right
+
+# status:AFS:time
+-
+  dependsOnValue: status:AFS
+  -
+    type: label
+    value: "Tijd AFS"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:AFS:time
+    columns: 7
+    alignment: right
+
+###status:DEMO
+# status:DEMO:reason
+-
+  dependsOnValue: status:DEMO
+  -
+    type: label
+    value: "Reden DEMO"
+    columns: 5
+
+  -
+    type: field
+    representsField: status:DEMO:reason
+    columns: 7
+    alignment: right
+    isEditable: false

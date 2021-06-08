@@ -1,0 +1,17 @@
+- type: date
+  name: datePicker
+  isRequired: true
+  labels: -date
+    -DATE
+
+- type: name
+  name: name
+  isRequired: true
+  labels: -name
+    -NAME
+
+- type: surname
+  name: surname
+  isRequired: true
+  labels: -surname
+    -SURNAME

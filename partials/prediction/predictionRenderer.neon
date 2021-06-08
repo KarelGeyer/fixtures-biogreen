@@ -1,0 +1,85 @@
+# Hide customerType selection when the field is pre-set
+# to a default value
+
+{{#if isCustomerTypeHidden}}
+-
+  page: {{page}}
+  dependsOnValue: status:SALE
+  -
+    type: field
+    representsField: status:SALE:customerType
+    isHidden: true
+
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:Company
+  -
+    type: component
+    value: welcome-soho
+    columns: 12
+
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:individual
+  -
+    type: component
+    value: prediction-residents
+    columns: 12
+    representsField: status:SALE:residents
+
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:individual
+  -
+    type: component
+    value: prediction-house-types
+    columns: 12
+    representsField: status:SALE:houseType
+{{/if}}
+
+# Show customerType selection when vendor has both options
+# to choose from (Company / individual)
+
+{{#unless isCustomerTypeHidden}}
+-
+  page: {{page}}
+  dependsOnValue: status:SALE
+  -
+    type: component
+    value: customer-type-selection
+    columns: 12
+    representsField: status:SALE:customerType
+
+# Flow for 'Company'
+# Doesn't send data for estimation and the whole estimation process
+# is thus skipped
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:Company
+  -
+    type: label
+    value: "Laten we doorgaan naar de volgende pagina."
+    classNames: [text-center, font-weight-normal]
+
+# Flow for 'individual'
+# Estimation is based either on address and number of residents or
+# on number of residents and houseType
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:individual
+  -
+    type: component
+    value: prediction-residents
+    columns: 12
+    representsField: status:SALE:residents
+
+-
+  page: {{page}}
+  dependsOnValue: status:SALE:customerType:individual
+  -
+    type: component
+    value: prediction-house-types
+    columns: 12
+    representsField: status:SALE:houseType
+
+{{/unless}}
