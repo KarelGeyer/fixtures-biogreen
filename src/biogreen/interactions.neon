@@ -1,0 +1,16 @@
+-
+  types:
+    - success
+    - presentation
+  isFinal: false
+  isStackable: true
+  value: status:AFS
+-
+  types:
+    - success
+    - offer
+  isFinal: false
+  isStackable: true
+  value: status:SALE
+
+

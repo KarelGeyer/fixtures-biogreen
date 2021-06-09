@@ -1,17 +1,220 @@
-- type: date
-  name: datePicker
-  isRequired: true
-  labels: -date
-    -DATE
-
-- type: name
+- type: text
+  name: user
+- type: city
+  name: city
+  labels:
+    - City
+- type: street
+  name: street
+  labels:
+    - Street
+- type: number
+  name: number
+  labels:
+    - Number
+- type: postalcode
+  name: postalcode
+  labels:
+    - Postalcode
+- type: text
   name: name
-  isRequired: true
-  labels: -name
-    -NAME
-
-- type: surname
+  labels:
+    - Name
+- type: text
   name: surname
-  isRequired: true
-  labels: -surname
-    -SURNAME
+  labels:
+    - Surname
+- type: email
+  name: email
+  labels:
+    - Email
+- type: text
+  name: numberAddition
+  labels:
+    - numberAddition
+
+## STATUSES ##
+- type: status
+  name: status
+  labels:
+    - STATUS
+  values:
+    - key: SALE
+      value: START
+      fields:
+        - type: text
+          name: name
+          isRequired: true
+          labels:
+            - Name
+        - type: text
+          name: surname
+          isRequired: true
+          labels:
+            - Surname
+        - type: text
+          name: email
+          isRequired: true
+          labels:
+            - Email
+        - type: text
+          name: emailConfirmation
+          isRequired: true
+        - type: range
+          name: product
+          isRequired: true
+          labels:
+            - Product
+          values:
+            - key: "1"
+              value: "Electricity"
+              fields:
+                - type: text
+                  name: eanCodeEl
+                  labels:
+                    - EAN Code Electricity
+                - type: range
+                  name: meterTypeEl
+                  labels:
+                    - Meter Type Electricity
+                  values:
+                    - key: "0"
+                      value: ""
+                      isInternal: true
+                      isDefault: true
+                    - key: "1"
+                      value: "Dual"
+                      fields:
+                        - type: text
+                          name: usageElPeak
+                          labels:
+                            - Usage Electricity Peak
+                        - type: text
+                          name: usageElOffPeak
+                          labels:
+                            - Usage Electricity OffPeak
+                    - key: "2"
+                      value: "Single"
+                      fields:
+                        - type: text
+                          name: usageEl
+                          labels:
+                            - Usage Electricity
+            - key: "2"
+              value: "Gas"
+              fields:
+                - type: text
+                  name: eanCodeGas
+                  labels:
+                    - EAN Code Gas
+                - type: text
+                  name: usageGas
+                  labels:
+                    - Usage Gas
+            - key: "3"
+              value: "Combined"
+              fields:
+                - type: text
+                  name: eanCodeEl
+                  labels:
+                    - EAN Code Electricity
+                - type: range
+                  name: meterTypeEl
+                  labels:
+                    - Meter Type Electricity
+                  values:
+                    - key: "0"
+                      value: ""
+                      isInternal: true
+                      isDefault: true
+                    - key: "1"
+                      value: "Dual"
+                      fields:
+                        - type: text
+                          name: usageElPeak
+                          labels:
+                            - Usage Electricity Peak
+                        - type: text
+                          name: usageElOffPeak
+                          labels:
+                            - Usage Electricity OffPeak
+                    - key: "2"
+                      value: "Single"
+                      fields:
+                        - type: text
+                          name: usageEl
+                          labels:
+                            - Usage Electricity
+                - type: text
+                  name: eanCodeGas
+                  labels:
+                    - EAN Code Gas
+                - type: text
+                  name: usageGas
+                  labels:
+                    - Usage Gas
+          ## EXTRAS ##
+        - type: option
+          name: tv
+          labels:
+            - TV
+          values:
+            - key: "0"
+              value: ""
+              isInternal: true
+              isDefault: true
+            - key: "1"
+              value: "TV"
+        - type: option
+          name: phone
+          labels:
+            - Phone
+          values:
+            - key: "0"
+              value: ""
+              isInternal: true
+              isDefault: true
+            - key: "1"
+              value: "Phone"
+        ## Phone fields ##
+        - type: option
+          name: transferPhone
+          labels:
+            - Transfer my number
+          values:
+            - key: "0"
+              value: ""
+              isInternal: true
+              isDefault: true
+            - key: "1"
+              value: "Transfer my number"
+        - type: text
+          name: transferPhoneNumber
+          labels:
+            - Transfer Phone Number
+
+    - key: AFS
+      value: AFS
+      fields:
+        - type: date
+          name: date
+          isRequired: true
+          labels:
+            - Consultation date
+
+## MAILING ##
+- type: range
+  name: futureContactMailStatus
+  isRequired: false
+  labels:
+    - E-mail verzonden
+  values:
+    - key: "0"
+      value: "Not sent"
+      isDefault: true
+    - key: "1"
+      value: "Mail triggered"
+    - key: "2"
+      value: "Mail delivered"
+    - key: "3"
+      value: "Mail is being sent"

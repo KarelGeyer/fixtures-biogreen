@@ -1,0 +1,5 @@
+# [production]
+# project_id = 2
+
+[staging]
+project_id = 1

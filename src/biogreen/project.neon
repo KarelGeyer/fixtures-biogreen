@@ -4,9 +4,23 @@ isActive: yes
 
 branding: 
     frontend: 
-        image: "./../../assets/energiedirect-logo.png"
-        color: '#320a4b'
+        image: "./../../assets/energiedirect-frontend-logo.png"
+        color: '#300a1b'
     backend: 
-        image: "./../../assets/energiedirect-logo.png"
-        color: '#320a4b'
+        image: "./../../assets/energiedirect-frontend-logo.png"
+        color: '#300a1b'
 
+modules:
+  - type: mailing
+    isActive: true
+  - type: landingpage
+    isActive: true
+  - type: webhook
+    isActive: true
+  - type: add_address
+    isActive: true
+
+methods:
+  -
+    type: event
+    name: event:click:submit

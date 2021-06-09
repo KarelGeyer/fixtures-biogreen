@@ -1,0 +1,12 @@
+-
+  subject: "Toekomstig contact"
+  template: efiber-future-contact
+  isSuspectIncluded: true
+  triggeredByValue: futureContactMailStatus:1
+
+  from:
+    name: "SalesChamp"
+    address: info+e-fiber@saleschamp.nl
+
+  fields:
+    - user

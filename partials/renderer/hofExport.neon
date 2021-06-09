@@ -1,5 +1,0 @@
--
-  - {{{exportField "number"}}} # Huisnummer
-  - {{{exportField "numberAddition"}}} # Huisnummertoevoeging
-  - {{{exportField "postalcode"}}} # Postcode
-  - {{{exportField "status"}}} # Status

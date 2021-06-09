@@ -1,0 +1,502 @@
+-
+  type: database
+  rows:
+    -
+        - 
+            type: label
+            value: "Name"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: name
+    -
+        - 
+            type: label
+            value: "Surname"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: surname
+    -
+        - 
+            type: label
+            value: "Email"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: email
+    -
+        - 
+            type: label
+            value: "City"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: city
+    -
+        - 
+            type: label
+            value: "Street"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: street
+    -
+        - 
+            type: label
+            value: "Street"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: street
+    -
+        - 
+            type: label
+            value: "Number"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: number
+    -
+        - 
+            type: label
+            value: "Postalcode"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: postalcode        
+-
+  type: export
+  rows:
+    -
+        - {{{exportField "name"}}} 
+        - {{{exportField "surname"}}} 
+        - {{{exportField "email"}}} 
+        - {{{exportField "city"}}} 
+        - {{{exportField "street"}}} 
+        - {{{exportField "number"}}} 
+        - {{{exportField "postalcode"}}} 
+        - {{{exportField "status:SALE:product"}}} 
+        - {{{exportField "status:SALE:transferPhoneNumber"}}} 
+
+-
+  type: export_full
+  rows:
+    -
+        - {{{exportField "name"}}} 
+        - {{{exportField "surname"}}} 
+        - {{{exportField "email"}}} 
+        - {{{exportField "city"}}} 
+        - {{{exportField "street"}}} 
+        - {{{exportField "number"}}} 
+        - {{{exportField "postalcode"}}} 
+        - {{{exportField "status:SALE:product"}}} 
+        - {{{exportField "status:SALE:transferPhoneNumber"}}} 
+
+-
+  type: title
+  rows:
+    -
+        -
+            type: field
+            representsField: city
+            alignment: left
+            isEditable: false
+            columns: 3
+        -
+            type: label
+            value: ", "
+            columns: 1
+        -
+            type: field
+            representsField: street
+            alignment: left
+            isEditable: false
+            columns: 3
+        -
+            type: field
+            representsField: number
+            alignment: left
+            isEditable: false
+            columns: 3
+
+-
+  type: viewer
+  rows:
+    -
+        -
+            type: field
+            representsField: city
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: street
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: number
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: postalcode
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: name
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: surname
+            alignment: left
+            isEditable: false
+        -
+            type: field
+            representsField: email
+            alignment: left
+            isEditable: false
+
+-
+  type: team_statistics 
+  rows:
+    -
+        isHidden: true
+        -
+            type: value
+            representsValue: status:SALE
+        -
+            type: value
+            representsValue: status:AFS
+
+-
+  type: modifier 
+  rows:
+    -
+        -
+            type: label
+            value: city
+            columns: 4   
+        -
+            type: field
+            representsField: city
+            columns: 5   
+    -
+        -
+            type: label
+            value: street 
+            columns: 4   
+        -
+            type: field
+            representsField: street 
+            columns: 5 
+    -
+        -
+            type: label
+            value: number
+            columns: 4               
+        -
+            type: field
+            representsField: number 
+            columns: 5 
+    -
+        -
+            type: label
+            value: postalcode
+            columns: 4                
+        -
+            type: field
+            representsField: postalcode 
+            columns: 5 
+    -
+        -
+            type: label
+            value: name  
+            columns: 4           
+        -
+            type: field
+            representsField: name
+            columns: 5 
+    -
+        -
+            type: label
+            value: surname
+            columns: 4   
+        -
+            type: field
+            representsField: surname
+            columns: 5  
+    -
+        -
+            type: label
+            value: email  
+            columns: 4             
+        -
+            type: field
+            representsField: email 
+            columns: 5            
+-
+  type: status_modifier_follow_up
+  rows:
+    - 
+        isHidden: true
+        - 
+            type: field
+            representsField: status
+    -
+        dependsOnValue: status:AFS
+        - 
+            type: label
+            value: "Consultation Date"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:AFS:date
+    -
+        dependsOnValue: status:SALE
+        - 
+            type: label
+            value: "Name"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:name
+    -
+        dependsOnValue: status:SALE
+        - 
+            type: label
+            value: "Surname"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:surname
+
+    -
+        dependsOnValue: status:SALE
+        - 
+            type: label
+            value: "Email"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:email
+    -
+        dependsOnValue: status:SALE
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:emailConfirmation
+            alignment: right
+    -
+        dependsOnValue: status:SALE
+        - 
+            type: label
+            value: "Product"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product
+
+    ### ELECTRICITY ###
+    -        
+        dependsOnValue: status:SALE:product:1
+        - 
+            type: label
+            value: "EAN Code Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:1:eanCodeEl        
+    -   
+        dependsOnValue: status:SALE:product:1
+        - 
+            type: label
+            value: "Meter Type Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:1:meterTypeEl
+    -   
+        dependsOnValue: status:SALE:product:1:meterTypeEl:1
+        - 
+            type: label
+            value: "Usage Electricity Peak"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:1:meterTypeEl:1:usageElPeak
+    -   
+        dependsOnValue: status:SALE:product:1:meterTypeEl:1
+        - 
+            type: label
+            value: "Usage Electricity OffPeak"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:1:meterTypeEl:1:usageElOffPeak
+    -   
+        dependsOnValue: status:SALE:product:1:meterTypeEl:2
+        - 
+            type: label
+            value: "Usage Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:1:meterTypeEl:2:usageEl
+
+
+    ### ELECTRICITY SINGLE/DUAL###
+
+    ### GAS ###
+    -        
+        dependsOnValue: status:SALE:product:2
+        - 
+            type: label
+            value: "EAN Code Gas"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:2:eanCodeGas
+    -        
+        dependsOnValue: status:SALE:product:2
+        - 
+            type: label
+            value: "Usage Gas"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:2:usageGas
+    ### COMBINED ###
+    -        
+        dependsOnValue: status:SALE:product:3
+        - 
+            type: label
+            value: "EAN Code Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:eanCodeEl        
+    -   
+        dependsOnValue: status:SALE:product:3
+        - 
+            type: label
+            value: "Meter Type Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:meterTypeEl
+    -   
+        dependsOnValue: status:SALE:product:3:meterTypeEl:1
+        - 
+            type: label
+            value: "Usage Electricity Peak"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:meterTypeEl:1:usageElPeak
+    -   
+        dependsOnValue: status:SALE:product:3:meterTypeEl:1
+        - 
+            type: label
+            value: "Usage Electricity OffPeak"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:meterTypeEl:1:usageElOffPeak
+    -   
+        dependsOnValue: status:SALE:product:3:meterTypeEl:2
+        - 
+            type: label
+            value: "Usage Electricity"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:meterTypeEl:2:usageEl
+    -        
+        dependsOnValue: status:SALE:product:3
+        - 
+            type: label
+            value: "EAN Code Gas"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:eanCodeGas
+    -        
+        dependsOnValue: status:SALE:product:3
+        - 
+            type: label
+            value: "Usage Gas"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:product:3:usageGas
+
+    ### EXTRAS ###
+    -        
+        dependsOnValue: status:SALE
+        - 
+            type: label
+            value: "Extras"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:tv
+    -        
+        dependsOnValue: status:SALE 
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:phone
+            alignment: right
+
+
+    -        
+        dependsOnValue: status:SALE:phone:1 
+        - 
+            type: field
+            columns: 5
+            representsField: status:SALE:transferPhone
+    -        
+        dependsOnValue: status:SALE:transferPhone:1 
+        - 
+            type: label
+            value: "Transfer Phone Number"
+            columns: 5
+        - 
+            type: field
+            columns: 7
+            representsField: status:SALE:transferPhoneNumber
+
+        
+    
